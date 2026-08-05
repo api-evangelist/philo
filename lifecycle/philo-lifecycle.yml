@@ -1,0 +1,48 @@
+generated: '2026-08-05'
+method: searched
+source: https://status.philo.com/
+status_page: https://status.philo.com/
+status_page_provider: Instatus
+status_page_machine_readable:
+- url: https://status.philo.com/summary.json
+  status: 200
+  content_type: application/json
+- url: https://status.philo.com/api/v2/summary.json
+  status: 200
+  content_type: application/json
+- url: https://status.philo.com/history.rss
+  status: 200
+  content_type: text/xml
+status_page_components:
+- Video
+- Sign Up
+- Sign In
+- Apps
+- help.philo.com
+- Support (chat and phone)
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: no public API, therefore no published versioning policy
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: no deprecation or Sunset/Deprecation (RFC 8594) policy published — there is no
+    public API contract to deprecate
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    status.philo.com publishes per-component uptime percentages but Philo publishes no
+    SLA document; it is a consumer subscription service, not a contracted API
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-05'
+  urls:
+  - url: https://status.philo.com/
+    status: 200
+  - url: https://status.philo.com/summary.json
+    status: 200
+  - url: https://status.philo.com/history.rss
+    status: 200

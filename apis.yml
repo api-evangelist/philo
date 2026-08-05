@@ -1,17 +1,32 @@
 aid: philo
 name: Philo
-description: 'Philo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Philo is a US live-television streaming service founded at Harvard in 2010
+  as Tivli, renamed in 2013 after television inventor Philo T. Farnsworth, and launched
+  to the public in 2017. Headquartered at 225 Green Street in San Francisco, it delivers
+  70+ entertainment and lifestyle channels, 75,000+ on-demand titles, 120+ free ad-supported
+  channels, and unlimited one-year DVR from $25/month across web, iOS, Android, Roku,
+  Fire TV, Apple TV and Chromecast, with TV Everywhere sign-in to partner network apps.
+  Philo publishes no public developer program: its product GraphQL endpoint at
+  www.philo.com/graphql is live but has introspection disabled, and the only machine-readable
+  documents it serves are IAB Tech Lab advertising-transparency files (ads.txt, app-ads.txt,
+  sellers.json), an RFC 9116 security.txt, and an Instatus status page with a JSON API.'
 url: https://raw.githubusercontent.com/api-evangelist/philo/refs/heads/main/apis.yml
+image: https://prod-s.cdn-cf.philo.com/storage/images/maestro/web/philo-opengraph.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Streaming
+- Television
+- Video
+- Media
+- Entertainment
+- Live TV
+- Advertising
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +35,67 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.philo.com/
+- type: About
+  url: https://www.philo.com/about
+- type: Support
+  url: https://help.philo.com/
+- type: HelpCenter
+  url: https://help.philo.com/
+- type: Blog
+  url: https://www.philo.com/blog
+- type: Pricing
+  url: https://www.philo.com/go/pricing
+- type: SignUp
+  url: https://www.philo.com/login/subscribe
+- type: Login
+  url: https://www.philo.com/login
+- type: TermsOfService
+  url: https://www.philo.com/about/terms
+- type: PrivacyPolicy
+  url: https://www.philo.com/about/privacy
+- type: GitHubOrganization
+  url: https://github.com/PhiloInc
+- type: StatusPage
+  url: https://status.philo.com/
+- type: Security
+  url: https://www.philo.com/.well-known/security.txt
+- type: SecurityTxt
+  url: well-known/philo-security.txt
+- type: WellKnown
+  url: well-known/philo-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/philo-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/philo-domain-security.yml
+- type: Conformance
+  url: conformance/philo-conformance.yml
+- type: Lifecycle
+  url: lifecycle/philo-lifecycle.yml
+- type: LLMsTxt
+  url: llms/philo-llms.txt
+- type: SecondaryMarket
   url: https://forgeglobal.com/philo_stock/
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 11
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Philo ships only a consumer streaming product — there is no developer.philo.com or
+    api.philo.com (neither hostname resolves), and the one API-shaped surface, the Apollo
+    GraphQL endpoint its own apps call at www.philo.com/graphql, answers 200 but rejects
+    introspection with "GraphQL introspection has been disabled".
+  evidence:
+  - url: https://www.philo.com/graphql
+    status: 200
+  - url: https://www.philo.com/openapi.json
+    status: 404
+  - url: https://www.philo.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.philo.com/.well-known/security.txt
+    status: 200
+  checked: '2026-08-05'

@@ -1,0 +1,65 @@
+generated: '2026-08-05'
+method: searched
+source: https://www.philo.com/.well-known/
+host: https://www.philo.com
+documents:
+- path: /.well-known/security.txt
+  standard: RFC 9116
+  status: 200
+  content_type: text/plain
+  file: philo-security.txt
+- path: /.well-known/pgp-key.txt
+  standard: OpenPGP public key referenced by security.txt Encryption field
+  status: 200
+  content_type: text/plain
+  file: philo-pgp-key.txt
+- path: /.well-known/openid-configuration
+  standard: OpenID Connect Discovery 1.0
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  standard: RFC 8414
+  status: 404
+- path: /.well-known/api-catalog
+  standard: RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  standard: A2A 1.0.0
+  status: 404
+- path: /.well-known/agent.json
+  standard: A2A pre-0.3 legacy
+  status: 404
+# Fixed-root-path discovery documents defined by IAB Tech Lab rather than RFC 8615.
+# These are the only structured, machine-readable documents Philo publishes.
+root_path_documents:
+- path: /ads.txt
+  standard: IAB Tech Lab ads.txt 1.1
+  status: 200
+  content_type: text/plain
+  file: philo-ads.txt
+  note: 401 lines; OWNERDOMAIN=philo.com, contact=adops@philo.com
+- path: /app-ads.txt
+  standard: IAB Tech Lab app-ads.txt 1.0
+  status: 200
+  content_type: text/plain
+  file: philo-app-ads.txt
+  note: byte-identical to /ads.txt as published
+- path: /sellers.json
+  standard: IAB Tech Lab sellers.json 1.0
+  status: 200
+  content_type: application/json
+  file: philo-sellers.json
+  note: version 1.0; one seller entry (Philo, seller_id 1, PUBLISHER)
+misses:
+- host: https://help.philo.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+x-evidence:
+  fetched: '2026-08-05'
+  method: curl -sS -L, status recorded per path

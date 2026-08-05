@@ -1,0 +1,62 @@
+generated: '2026-08-05'
+method: searched
+source: live probes of https://www.philo.com and https://status.philo.com
+note: >-
+  Philo publishes no OpenAPI, AsyncAPI, GraphQL SDL or JSON Schema for its own service,
+  so no API-contract standards can be asserted. The standards below are the ones Philo
+  demonstrably conforms to through documents it actually serves.
+standards:
+- id: rfc9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: true
+  evidence: https://www.philo.com/.well-known/security.txt returned 200 with Contact
+    and Encryption fields
+- id: iab-sellers-json-1.0
+  name: IAB Tech Lab sellers.json 1.0
+  conforms: true
+  evidence: https://philo.com/sellers.json returned 200 application/json with version
+    "1.0", contact_email, contact_address and a sellers[] array
+- id: iab-ads-txt
+  name: IAB Tech Lab ads.txt / app-ads.txt
+  conforms: true
+  evidence: https://www.philo.com/ads.txt and /app-ads.txt returned 200 text/plain with
+    OWNERDOMAIN and contact directives
+- id: hsts
+  name: HTTP Strict Transport Security (RFC 6797)
+  conforms: true
+  evidence: security/philo-domain-security.yml — www.philo.com hsts max-age=31536000
+- id: dmarc
+  name: DMARC (RFC 7489)
+  conforms: true
+  evidence: security/philo-domain-security.yml — philo.com DMARC policy reject
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: no /.well-known/oauth-authorization-server (404); no published authorization
+    server metadata
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: no OpenAPI/Swagger document found at any probed path on philo.com, help.philo.com
+    or status.philo.com
+- id: graphql-introspection
+  name: GraphQL introspection (June 2018 spec)
+  conforms: false
+  evidence: POST https://www.philo.com/graphql returns GRAPHQL_VALIDATION_FAILED —
+    "GraphQL introspection has been disabled"
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: no public contract to evaluate; GraphQL errors use the Apollo extensions.code
+    envelope, not application/problem+json
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json both 404 on every
+    probed host
+x-evidence:
+  fetched: '2026-08-05'
