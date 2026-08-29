@@ -11,6 +11,17 @@ description: 'Philo is a US live-television streaming service founded at Harvard
   documents it serves are IAB Tech Lab advertising-transparency files (ads.txt, app-ads.txt,
   sellers.json), an RFC 9116 security.txt, and an Instatus status page with a JSON API.'
 url: https://raw.githubusercontent.com/api-evangelist/philo/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://prod-s.cdn-cf.philo.com/storage/images/maestro/web/philo-opengraph.png
 x-type: company
 x-source: harvest:secondary-market
