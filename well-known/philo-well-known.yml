@@ -2,36 +2,6 @@ generated: '2026-08-05'
 method: searched
 source: https://www.philo.com/.well-known/
 host: https://www.philo.com
-documents:
-- path: /.well-known/security.txt
-  standard: RFC 9116
-  status: 200
-  content_type: text/plain
-  file: philo-security.txt
-- path: /.well-known/pgp-key.txt
-  standard: OpenPGP public key referenced by security.txt Encryption field
-  status: 200
-  content_type: text/plain
-  file: philo-pgp-key.txt
-- path: /.well-known/openid-configuration
-  standard: OpenID Connect Discovery 1.0
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  standard: RFC 8414
-  status: 404
-- path: /.well-known/api-catalog
-  standard: RFC 9727
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/agent-card.json
-  standard: A2A 1.0.0
-  status: 404
-- path: /.well-known/agent.json
-  standard: A2A pre-0.3 legacy
-  status: 404
-# Fixed-root-path discovery documents defined by IAB Tech Lab rather than RFC 8615.
-# These are the only structured, machine-readable documents Philo publishes.
 root_path_documents:
 - path: /ads.txt
   standard: IAB Tech Lab ads.txt 1.1
@@ -63,3 +33,38 @@ misses:
 x-evidence:
   fetched: '2026-08-05'
   method: curl -sS -L, status recorded per path
+hosts:
+- host: https://www.philo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: philo-security.txt
+    standard: RFC 9116
+    content_type: text/plain
+  - path: /.well-known/pgp-key.txt
+    status: 200
+    file: philo-pgp-key.txt
+    standard: OpenPGP public key referenced by security.txt Encryption field
+    content_type: text/plain
+  - path: /.well-known/openid-configuration
+    status: 404
+    standard: OpenID Connect Discovery 1.0
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    standard: RFC 8414
+  - path: /.well-known/api-catalog
+    status: 404
+    standard: RFC 9727
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+    standard: A2A 1.0.0
+  - path: /.well-known/agent.json
+    status: 404
+    standard: A2A pre-0.3 legacy
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
