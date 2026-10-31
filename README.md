@@ -64,5 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Philo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/philo_stock/
+Philo is a US live-television streaming service founded at Harvard in 2010 as Tivli, renamed in 2013 after television inventor Philo T. Farnsworth, and launched to the public in 2017. Headquartered at 225 Green Street in San Francisco, it delivers 70+ entertainment and lifestyle channels, 75,000+ on-demand titles, 120+ free ad-supported channels, and unlimited one-year DVR from $25/month across web, iOS, Android, Roku, Fire TV, Apple TV and Chromecast, with TV Everywhere sign-in to partner network apps. Philo publishes no public developer program: its product GraphQL endpoint at www.philo.com/graphql is live but has introspection disabled, and the only machine-readable documents it serves are IAB Tech Lab advertising-transparency files (ads.txt, app-ads.txt, sellers.json), an RFC 9116 security.txt, and an Instatus status page with a JSON API.
+
+**Areas:** Company · Streaming · Television · Video · Media · Entertainment · Live TV · Advertising · Consumer
+
+## Philo on APIs.io
+
+Everything profiled for Philo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/philo/](https://apis.io/providers/philo/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Philo Domain Security](https://apis.io/security/philo/philo-domain-security/)
+- [Philo Vulnerability Disclosure](https://apis.io/security/philo/philo-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.philo.com/)
+- [Pricing](https://www.philo.com/go/pricing)
+- [Sign up](https://www.philo.com/login/subscribe)
+- [Support](https://help.philo.com/)
+- [Blog](https://www.philo.com/blog)
+- [Security](https://www.philo.com/.well-known/security.txt)
+- [Terms of service](https://www.philo.com/about/terms)
+- [Privacy policy](https://www.philo.com/about/privacy)
+- [GitHub](https://github.com/PhiloInc)
+- [Status](https://status.philo.com/)
+
+## API Evangelist rating
+
+**Kin Score 20.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 44.7 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/philo/](https://apis.io/providers/philo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Philo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/philo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
